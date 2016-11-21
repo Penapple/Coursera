@@ -7,7 +7,6 @@ def get_numpy_data(data_sframe, features, output):
     data_sframe['constant'] = 1 # this is how you add a constant column to an SFrame
     # add the column 'constant' to the front of the features list so that we can extract it along with the others:
     features = ['constant'] + features # this is how you combine two lists
-#     print features
     # select the columns of data_SFrame given by the features list into the SFrame features_sframe (now including constant):
     features_sframe = data_sframe[features]
     # the following line will convert the features_SFrame into a numpy matrix:
@@ -32,7 +31,6 @@ def feature_derivative(errors, feature):
 def regression_gradient_descent(feature_matrix, output, initial_weights, step_size, tolerance):
     converged = False
     weights = np.array(initial_weights) # make sure it's a numpy array
-#     print weights
     counter = 0
     while not converged:
         # compute the predictions based on feature_matrix and weights using your predict_output() function
