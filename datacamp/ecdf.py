@@ -9,4 +9,4 @@ def ecdf(data):
 
     # y-data for the ECDF: y
     y = np.arange(1,n+1)/n
-    return x, y/n
+    return x, y
